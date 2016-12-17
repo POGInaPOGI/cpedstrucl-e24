@@ -20,7 +20,16 @@ public:
                                
         head = n;              
     }
-
+	void display(){
+		Node *j = head;
+		Node *k = head;
+		
+	while (k){
+		j=k;
+		cout << j-> x << endl;
+		k = j-> next;
+			}
+	}
     int popValue(){
         Node *n = head;
         int ret = n->x;
@@ -39,7 +48,7 @@ void menu(){
 	cout << "1: Insert" << endl;
 	cout << "2: Pop" << endl;
 	cout << "3: Exit" << endl;
-	
+	cout << "4: Display" << endl;
 }
 int main() {
 	LinkedList list;
@@ -65,7 +74,11 @@ int main() {
     	exit(0);
     	system("pause");
     	break;
-}
+    case 4:
+    	cout << "Display: ";
+    	list.display();
+  		system("pause");
+			break;}
 }
     return 0;
 }
