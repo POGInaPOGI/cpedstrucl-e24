@@ -1,4 +1,6 @@
 #include <iostream>
+#include <iomanip>
+#include <conio.h>
 using namespace std;
 
 class Stack {
@@ -73,7 +75,19 @@ int main() {
 			s -> display();
 			system("pause");
 		break;
+		case 4:{
+			exit(1);
+			break;
+		}
+		default:{
+			cout << "Invalid input";
+			getch();
+			break;
+			
+		}
+			
+		}
 			}
-}
+
   return 1;
 }
